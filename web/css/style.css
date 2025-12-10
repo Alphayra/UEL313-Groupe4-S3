@@ -32,3 +32,160 @@ body {
     padding-top: 30px;
     padding-bottom: 10px;
 }
+
+/* style Pour la page administation */
+
+/* pour un tableau au rebords arrodnis et une ombre */
+.admin-panel-shadow {
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #3C6E71;
+    border-color: #3C6E71;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #2F595C;
+    border-color: #2F595C;
+}
+
+.nav-tabs > li > a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #fff;
+    background-color: #3C6E71;
+    border: 1px solid #3C6E71;
+    border-bottom-color: transparent;
+    border-radius: 6px 6px 0 0;
+}
+
+.adminTable .table-responsive {
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.adminTable table > thead > tr > th {
+    background-color: #EBEBEB;
+    color: #333333;
+    font-weight: 600;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transform: scale(1.005); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.linkTitle {
+    color: #3C6E71;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.linkTitle:hover {
+    color: #2F595C;
+}
+
+/* style pour le titre dans admin */
+.header-admin-title {
+    padding-bottom: 15px; 
+    margin-bottom: 25px; 
+    border-bottom: 3px solid #EBEBEB; 
+}
+
+.header-admin-title h2 {
+    color: #3C6E71; 
+    font-weight: 700;
+    font-size: 32px; 
+}
+
+.header-admin-title .glyphicon {
+    margin-right: 10px;
+    color: #607D8B; 
+}
+
+/* fond gris clair dans page admin /modif. et /ajout */
+.admin-edit-page {
+    background-color: #FAFAFA;
+}
+
+/* style pour le formulaire d'ajout et modif des lien */
+
+.well {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3C6E71;
+    box-shadow: 0 0 0 0.2rem rgba(60, 110, 113, 0.25);
+}
+
+.control-label {
+    font-weight: 600;
+    color: #333333;
+}
+
+.well .btn-primary {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-group .col-sm-offset-4.col-sm-3 {
+    margin-left: 33.33333333%;
+}
+
+
+/* style pour les titre d'ajout et modif */
+.header-admin-title h2 {
+    color: #3C6E71;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.header-admin-title {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #EBEBEB;
+}
+
+.header-admin-title .glyphicon {
+    margin-right: 10px;
+    color: #607D8B;
+}
