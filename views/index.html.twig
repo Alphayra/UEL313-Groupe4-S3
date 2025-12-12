@@ -3,19 +3,22 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-	<div class="row">
+	<div class="flex flex-row content-center wrap">
 		{% for link in links %}
-			<div class="col-md-4">
+			<div class="flex-divide flex flex-col content-sb link-box">
 			    <h2><a class="linkTitle" href="{{ path('link', { 'id': link.id }) }}">{{ link.title }}</a></h2>
 			    <p>{{ link.desc }}</p>
-			    <a href="{{ link.url }}" title="" target="_blank">Open ></a>
-			    <em>(by {{ link.user.username }})</em>
+				<div class="flex-end">
+					<a href="{{ link.url }}" title="" target="_blank" class="link-btn">Open ></a>
+					<em>(by {{ link.user.username }})</em>
 
-			    {% for tag in link.tags %}
-			    	<a href="{{ path('tag', { 'id': tag.id }) }}" title="Filtrer">
-			    		{{ tag.title }}
-			    	</a>
-			    {% endfor %}
+					{% for tag in link.tags %}
+						<a href="{{ path('tag', { 'id': tag.id }) }}" title="Filtrer" class="link-filter">
+							{{ tag.title }}
+						</a>
+					{% endfor %}
+				</div>
+			    
 			</div>
 		{% endfor %}
 	</div>
