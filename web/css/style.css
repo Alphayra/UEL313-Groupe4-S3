@@ -312,6 +312,7 @@ body {
     padding: 0px 10px 16px 10px;
     margin: 10px;
     box-shadow: 0px 5px 12px #0000003a;
+    background-color: var(--white);
 }
 
 
@@ -331,7 +332,7 @@ body {
     position: absolute;
     height: 40px;
     width: 100%;
-    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     bottom: 0;
 }
