@@ -22,4 +22,33 @@
 			</div>
 		{% endfor %}
 	</div>
+
+	{# Pagination #}
+	{% if totalPages > 1 %}
+	<nav aria-label="Page navigation" class="text-center" style="margin-top: 30px;">
+		<ul class="pagination">
+			{% if currentPage > 1 %}
+			<li>
+				<a href="{{ path('home', {'page': currentPage - 1}) }}" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			{% endif %}
+			
+			{% for page in 1..totalPages %}
+			<li {% if page == currentPage %}class="active"{% endif %}>
+				<a href="{{ path('home', {'page': page}) }}">{{ page }}</a>
+			</li>
+			{% endfor %}
+			
+			{% if currentPage < totalPages %}
+			<li>
+				<a href="{{ path('home', {'page': currentPage + 1}) }}" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+			{% endif %}
+		</ul>
+	</nav>
+	{% endif %}
 {% endblock %}

@@ -11,11 +11,22 @@ class HomeController {
     /**
      * Home page controller.
      *
+     * @param Request $request Incoming request
      * @param Application $app Silex application
      */
-    public function indexAction(Application $app) {
-        $links = $app['dao.link']->findAll();
-        return $app['twig']->render('index.html.twig', array('links' => $links));
+    public function indexAction(Request $request, Application $app) {
+        $page = $request->query->getInt('page', 1);
+        $linksPerPage = 15;
+        
+        $links = $app['dao.link']->findByPage($page, $linksPerPage);
+        $totalLinks = $app['dao.link']->countAll();
+        $totalPages = ceil($totalLinks / $linksPerPage);
+        
+        return $app['twig']->render('index.html.twig', array(
+            'links' => $links,
+            'currentPage' => $page,
+            'totalPages' => $totalPages
+        ));
     }
 
         /**
